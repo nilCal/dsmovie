@@ -1,7 +1,15 @@
 import MovieCard from "assets/components/MovieCard";
 import Pagination from "assets/components/Pagination";
+import axios from "axios";
+import { BASE_URL } from "utils/requests";
 
 function Listing() {
+
+    axios.get(`${BASE_URL}/movies`).then(
+        response => {
+            console.log(response.data)
+        }
+    );
 
     return (
         <>
